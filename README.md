@@ -1,14 +1,15 @@
-# Ex-3 GENERATION OF LEXICAL TOKENS USING C
-# AIM
+~~~
+ Ex-3 GENERATION OF LEXICAL TOKENS USING C
+  AIM
  To write a C program to implement lexical analyzer to recognize a few patterns.
-# ALGORITHM
+ALGORITHM
 1)	Start the program.
 2)	Get the input from the user with the terminating symbol ‘;’.
 3)	Until the symbol is ‘;’, do the following
 4)	If the next character of the symbol is an operator then print it as an operator.
 5)	Stop the program.
-# PROGRAM
-~~~
+ PROGRAM
+
 #include<stdio.h>
 #include<ctype.h>
 #include<stdlib.h>
@@ -17,7 +18,6 @@
 char lexemes[MAX];
 char buffer[SIZE];
 int lastchar = -1;{
-    char *lexptr;
     int token;
 } symtable[100];
 
@@ -64,9 +64,6 @@ int main() {
   while (lookahead != DONE) {
         if (lookahead == NUM) {
             printf("\n Number :%d", tokenval);
-      if (lookahead == '<' || lookahead == '>' || lookahead == '<=' || lookahead == '>=' || lookahead == '!=') 
-            printf("\nRelational Operator");
-        lookahead = lexer();
     }
     return 0;
 }
