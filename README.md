@@ -31,13 +31,10 @@ struct entry keywords[] = {
 };
 }
 int insert(char s[], int tok) {
-    int len;
-    len = strlen(s);
     if (lastentry + 1 >= MAX)
         errormsg("symtable is full");
     if (lastentry + len + 1 >= MAX)
         errormsg("lexemes array is full");
-    lastentry = lastentry + 1;
 return lastentry;
 }
 void initialise() {
